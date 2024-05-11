@@ -1,15 +1,3 @@
-# Specify the environment variable
-variable "environment" {
-  default     = "dev"
-  description = "The environment name"
-}
-
-# Provider configuration for Google Cloud Platform
-provider "google" {
-  project = "fleet-garage-421904"
-  region  = "us-central1"
-  zone    = "us-central1-a"
-}
 
 # Fetch available compute zones as data
 data "google_compute_zones" "zones" {}
