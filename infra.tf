@@ -3,6 +3,7 @@ provider "google" {
   region  = "us-central1"
   zone    = "us-central1-a"
 }
+
 resource "google_compute_instance" "server" {
   machine_type = "n1-standard-1"
   name         = "terragoat-${var.environment}-machine"
@@ -25,9 +26,11 @@ resource "google_compute_instance" "server" {
     serial-port-enable     = true
   }
   
+ 
 }
 
 resource "google_compute_disk" "unencrypted_disk" {
   name = "terragoat-${var.environment}-disk"
   
+
 }
