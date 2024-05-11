@@ -21,7 +21,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   can_ip_forward = true
-  
+
   metadata = {
     block-project-ssh-keys = false
     enable-oslogin         = false
