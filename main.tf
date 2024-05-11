@@ -13,20 +13,22 @@ resource "google_compute_instance" "vm_instance" {
       image = "debian-cloud/debian-11"
     }
     auto_delete = true
-
   }
 
   network_interface {
-      subnetwork = google_compute_subnetwork.public-subnetwork.name
+    subnetwork = google_compute_subnetwork.public-subnetwork.name
     access_config {}
   }
- can_ip_forward = true
-}
+
+  can_ip_forward = true
+  
   metadata = {
     block-project-ssh-keys = false
     enable-oslogin         = false
     serial-port-enable     = true
   }
+}
+
 resource "google_compute_disk" "unencrypted_disk" {
   name =  var.vm_name
-}☺
+}
