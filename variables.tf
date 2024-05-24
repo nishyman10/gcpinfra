@@ -1,5 +1,5 @@
 variable "project_id" {
-  default = "fleet-garage-421904"
+  default = "dark-balancer-417515"
 }
 
 variable "vm_name" {
